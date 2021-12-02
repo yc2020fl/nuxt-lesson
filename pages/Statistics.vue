@@ -40,16 +40,16 @@ export default {
         )
         .then(function(response) {
 
-          var array = results;
-          for (let i = 0; i < results.objectIDs.length; i++) {
-            let everyObjectID = results.objectIDs[i]
-          };
+          // var array = results;
+          // for (let i = 0; i < results.objectIDs.length; i++) {
+          //   let everyObjectID = results.objectIDs[i]
+          // };
 
           //even with out the above codes, .get of IDs, and .then(function(response)), the code below will still works,
           //with promise.all because each ID is explicitly listed
           Promise.all([
-              axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects/${everyObjectID}')
-              // axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects/435877')
+              // axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects/${everyObjectID}')
+              axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects/435877')
             ])
 
             .then((collection) => {
