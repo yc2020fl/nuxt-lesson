@@ -1,21 +1,16 @@
-
-
-
-
-
 export default {
-data() {
+  data() {
 
-  return {
-  isRed: true,
+    return {
+      isRed: true,
 
-}
-},
+    }
+  },
   methods: {
 
     makeRed: function() {
-        this.isRed = !this.isRed;
-}
+      this.isRed = !this.isRed;
+    }
 
 
 

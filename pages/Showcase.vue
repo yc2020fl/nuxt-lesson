@@ -6,12 +6,12 @@
 
   <h2> Paris Salon Kind of Room</h2>
 
-  <main >
+  <main>
     <div class="row mt-5 mb-5">
 
 
-  <!-- a list of the female artists names from script, kpt the same style of list-group of the white bg -->
-<!-- take this part out, because do not need repeating names -->
+      <!-- a list of the female artists names from script, kpt the same style of list-group of the white bg -->
+      <!-- take this part out, because do not need repeating names -->
       <!-- <div class="col-xl-12 col-lg-12 col-sm-12 col-12 bg-success p-2 mt-2">
         <h2 class="bg-warning">Females Artists</h2>
 
@@ -26,11 +26,11 @@
       <div id="Showcase">
         <!-- <div class=" col-xl-3 col-lg-4 col-sm-6 col-12 bg-danger p-2 mt-5"> -->
 
-<!-- the mock up are from post.vue, and also the styles -->
+        <!-- the mock up are from post.vue, and also the styles -->
         <section v-if="posts">
           <div class="image">
             <div class="imageShow">
-<!--  pull the mock up from post.vue -->
+              <!--  pull the mock up from post.vue -->
               <post v-for="post in posts" v-bind:post="post" v-bind:key="post.id">
               </post>
 
@@ -68,7 +68,7 @@ export default {
     return {
 
 
-//did not use since Lesosn 8
+      //did not use since Lesosn 8
       // femaleArtists: [{
       //     message: 'Berthe Morisot '
       //   },
@@ -112,7 +112,7 @@ export default {
           image: 'https://collectionapi.metmuseum.org/api/collection/v1/iiif/436840/1425691/main-image'
         },
         {
-          id:4,
+          id: 4,
           name: 'Adélaïde Labille-Guiard ',
           painting: ' Madame Élisabeth de France (1764–1794)',
           year: 'ca.1787 ',
@@ -122,7 +122,7 @@ export default {
 
 
         {
-          id:5,
+          id: 5,
           name: 'Rosa Bonheur',
           painting: ' The Horse Fair',
           year: '1852–55 ',
@@ -131,7 +131,7 @@ export default {
         },
 
         {
-          id:6,
+          id: 6,
           name: 'Mary Cassatt',
           painting: ' Lydia Crocheting in the Garden at Marly',
           year: '1880',
@@ -140,9 +140,9 @@ export default {
         },
 
         {
-          id:7,
+          id: 7,
           name: 'Mary Cassatt ',
-          painting: ' Lilacs in a Window (Vase de Lilas a la Fenetre)' ,
+          painting: ' Lilacs in a Window (Vase de Lilas a la Fenetre)',
           year: 'ca. 1880-83',
           link: 'https://www.metmuseum.org/art/collection/search/13758',
           image: 'https://images.metmuseum.org/CRDImages/ad/mobile-large/DT254478.jpg'
@@ -154,24 +154,37 @@ export default {
   },
 
   //start of vue-meta
-    head: {
-      title: 'Artworks of Impressionism Female Artists ',
-      titleTemplate: '%s | Paris Salon',
-      htmlAttrs: {
-        lang: 'en',
+  head: {
+    title: 'Artworks of Impressionism Female Artists ',
+    titleTemplate: '%s | Paris Salon',
+    htmlAttrs: {
+      lang: 'en',
 
+    },
+
+    meta: [{
+        charset: 'utf-8'
       },
-
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'an art gallery-like of paintings of female artists in the impressionism era' },
-        { name: 'format-detection', content: 'telephone=no' }
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-      ]
-    }
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'an art gallery-like of paintings of female artists in the impressionism era'
+      },
+      {
+        name: 'format-detection',
+        content: 'telephone=no'
+      }
+    ],
+    link: [{
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    }]
+  }
 }
 </script>
 

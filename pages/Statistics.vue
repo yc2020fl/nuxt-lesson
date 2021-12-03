@@ -2,13 +2,9 @@
 <div class>
 
 
-    <section class="container" v-if="list">
-      <paintingsAPI
-      v-for="item of list"
-      :key="item.id"
-      :item="item"
-      />
-    </section>
+  <section class="container" v-if="list">
+    <paintingsAPI v-for="item of list" :key="item.id" :item="item" />
+  </section>
 
 
 
@@ -37,27 +33,20 @@ export default {
 
   methods: {
 
+
+
     getPainting: function() {
 
       var art = this;
 
-      axios
-        .get('https://collectionapi.metmuseum.org/public/collection/v1/search?dateBegin=1770&dateEnd=1890&q=impressionism'
+      axios.get('https://collectionapi.metmuseum.org/public/collection/v1/search?dateBegin=1770&dateEnd=1890&q=impressionism')
 
-
-        )
-
-
-
-          // getData =>
-          //     let objectIDs = data.objectIDs.length;
-          //   for (let i = 0; i < data.objectIDs.length; i++) {
-          //     everyObjectID = results.objectIDs[i]
-          //   }
-          // )
-
-
-
+        // getData =>
+        //     let objectIDs = data.objectIDs.length;
+        //   for (let i = 0; i < data.objectIDs.length; i++) {
+        //     everyObjectID = results.objectIDs[i]
+        //   }
+        // )
 
         // .then((apiData) => {
         //   console.log(apiData);
@@ -67,13 +56,9 @@ export default {
         //   })
         // })
 
-
-
-
         .then(function(response) {
 
           // var array = results;
-
 
           //even with out the above codes, .get of IDs, and .then(function(response)), the code below will still works,
           //with promise.all because each ID is explicitly listed
@@ -92,9 +77,6 @@ export default {
               axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects/435963'),
               axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects/436524'),
               axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects/334312')
-
-
-
             ])
 
             .then((collection) => {
@@ -115,15 +97,11 @@ export default {
         .finally(() => this.loading = false)
     } //
 
-
   }, //closing for method
-
 
   mounted: function() {
     this.getPainting();
   },
-
-
 
 
   //start of vue-meta
