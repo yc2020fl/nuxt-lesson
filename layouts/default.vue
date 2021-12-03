@@ -61,9 +61,9 @@ export default {
         lang: 'en',
         amp: true
       },
-      bodyAttrs: {
-        class: ['xl-lg-sm responsive', 'pink']
-      },
+      // bodyAttrs: {
+      //   class: ['xl-lg-sm responsive', 'pink']
+      // },
 
       meta: [{
           charset: 'utf-8'
