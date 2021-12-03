@@ -29,7 +29,10 @@ mounted () {
 
   }
 
-</script> -->
+</script>
+
+
+ -->
 
 
 
@@ -44,12 +47,9 @@ mounted () {
 
 
 
+<!-- working code with hard corded codes -->
 
-
-
-//working code with hard corded codes
-
-<!-- // <script> -->
+ // <script>
 // import axios from 'axios'
 // import Card from '~/components/Card.vue'
 //
@@ -77,8 +77,8 @@ mounted () {
 //
 //         .then(function(response) {
 //
-////even with out the above codes, .get of IDs, and .then(function(response)), the code below will still works,
-//with promise.all because each ID is explicitly listed within promise.all
+// //even with out the above codes, .get of IDs, and .then(function(response)), the code below will still works,
+// with promise.all because each ID is explicitly listed within promise.all
 //           Promise.all([
 //
 //             axios.get('https://collectionapi.metmuseum.org/public/collection/v1/objects/435877'),
@@ -155,4 +155,4 @@ mounted () {
 //
 //
 //
-<!-- </script> -->
+// </script>
